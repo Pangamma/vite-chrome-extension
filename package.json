@@ -1,0 +1,32 @@
+{
+  "name": "vite-chrome-extension",
+  "version": "0.0.1",
+  "description": "A chrome extension template that uses vite, react, typescript, and scss.",
+  "private": true,
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Pangamma/vite-chrome-extension.git"
+  },
+  "scripts": {
+    "build": "tsc --noEmit && vite build",
+    "build:watch": "cross-env __DEV__=true vite build --watch"
+  },
+  "type": "module",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.206",
+    "@types/node": "^18.11.18",
+    "@types/react": "^18.0.26",
+    "@types/react-dom": "^18.0.10",
+    "@vitejs/plugin-react": "^3.0.0",
+    "cross-env": "^7.0.3",
+    "sass": "^1.57.1",
+    "ts-loader": "^9.4.2",
+    "typescript": "^4.9.4",
+    "vite": "^4.0.3"
+  }
+}

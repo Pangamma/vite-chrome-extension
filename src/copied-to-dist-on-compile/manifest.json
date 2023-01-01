@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json.schemastore.org/chrome-manifest",
+  "manifest_version": 3,
+  "name": "vite-chrome-extension",
+  "version": "0.0.1",
+  "description": "A chrome extension template that uses vite, react, typescript, and scss.",
+  "action": {
+    "default_popup": "src/pages/popup/index.html",
+    "default_icon": {
+      "24": "icon-34.png"
+    }
+  },
+  "icons": {
+    "128": "icon-128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "assets/js/*.js",
+        "assets/css/*.css",
+        "assets/png/*.png",
+        "assets/jpeg/*.jpeg",
+        "icon-128.png",
+        "icon-34.png"
+      ],
+      "matches": [
+        "*://*/*"
+      ]
+    }
+  ]
+}
