@@ -23,7 +23,7 @@ interface DeploymentWatcherState {
   releases: WatchedRelease[];
 }
 
-class DeploymentWatcher extends React.PureComponent<DeploymentWatcherProps, DeploymentWatcherState> {
+export default class DeploymentWatcher extends React.PureComponent<DeploymentWatcherProps, DeploymentWatcherState> {
   private setStateAsync = setStateAsyncFactory(this);
 
   constructor(props: DeploymentWatcherProps) {
@@ -154,5 +154,3 @@ class DeploymentWatcher extends React.PureComponent<DeploymentWatcherProps, Depl
     );
   }
 }
-
-export default DeploymentWatcher;

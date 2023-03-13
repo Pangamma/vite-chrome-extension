@@ -37,6 +37,7 @@ export default defineConfig({
     
     rollupOptions: {
       input: {
+        index: path.resolve(root, "pages", "index.html"),
         devtools: resolve(pagesDir, "devtools", "index.html"),
         panel: resolve(pagesDir, "panel", "index.html"),
         content: resolve(pagesDir, "content", "index.ts"),
@@ -53,9 +54,7 @@ export default defineConfig({
       },
       output: {
         entryFileNames: "src/pages/[name]/index.js",
-        chunkFileNames: isDev
-          ? "assets/js/[name].js"
-          : "assets/js/[name].[hash].js",
+        chunkFileNames: "assets/js/[name].js",
         assetFileNames: (assetInfo) => {
           const { dir, name: _name } = path.parse(assetInfo.name);
           const assetFolder = dir.split("/").at(-1);
